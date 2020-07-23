@@ -86,7 +86,7 @@ extension HomeViewController : FPNTextFieldDelegate {
         textField.EditClearButtonAppearence()
     }
     
-    /// Let you know when the clear button got pressed
+    /// Lets you know when the clear button got pressed
     func DidPressClearButton() {
         self.changeButtonStatus()
         textField.EditClearButtonAppearence()

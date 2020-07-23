@@ -36,6 +36,16 @@ extension WidgetViewController {
         }
     }
     
+    @objc func openURL(_ url: URL) {
+        var responder: UIResponder? = self
+        while responder != nil {
+            if let application = responder as? UIApplication {
+                application.perform(#selector(openURL(_:)), with: url)
+            }
+            responder = responder?.next
+        }
+    }
+    
     func changeButtonStatus() {
         if clipboardHasStringAndTextFieldIsEmpty() {
             chatButton.applyPasteFromClipboardStyle()

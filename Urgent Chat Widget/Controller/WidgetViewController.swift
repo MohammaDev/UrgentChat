@@ -40,16 +40,6 @@ class WidgetViewController: UIViewController, NCWidgetProviding {
             openURL(url)
         }
     }
-    
-    @objc func openURL(_ url: URL) {
-        var responder: UIResponder? = self
-        while responder != nil {
-            if let application = responder as? UIApplication {
-                application.perform(#selector(openURL(_:)), with: url)
-            }
-            responder = responder?.next
-        }
-    }
 }
 
 //MARK: - FPNTextFieldDelegate
@@ -61,7 +51,7 @@ extension WidgetViewController : FPNTextFieldDelegate {
         textField.EditClearButtonAppearence()
     }
     
-    /// Let you know when the clear button got pressed
+    /// Lets you know when the clear button got pressed
     func DidPressClearButton() {
         self.changeButtonStatus()
         textField.EditClearButtonAppearence()
