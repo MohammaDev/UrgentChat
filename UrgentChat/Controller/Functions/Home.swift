@@ -107,6 +107,5 @@ extension HomeViewController {
         chatButton.setTitleColor(UIColor(named: "\(kind)\(K.Button.titleColor)"), for: .normal)
         self.navigationItem.rightBarButtonItem?.image = UIImage(named: "\(kind)\(K.Image.gear)")?.withRenderingMode(.alwaysOriginal)
         userDefaults.set(kind, forKey: K.Theme.currentTheme)
-        
     }
 }

@@ -17,7 +17,6 @@ class WidgetViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setBouncing()
         textField.setFlagSize()
         chatButton.setDubaiFont()
