@@ -26,6 +26,7 @@ class WidgetViewController: UIViewController, NCWidgetProviding {
         chatButton.setCornerRadius()
         textField.clearPlaceholder()
         textField.ForceAlignmentToLeft()
+        // Mohammad Abdu
     }
         
     @IBAction func chatButtonPressed(_ sender: UIButton) {
