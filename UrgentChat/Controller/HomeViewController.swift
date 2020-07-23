@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
         self.setActionForRightBarButton()
         SettingsViewController.delegate = self
         self.changeTheme(to: userDefaults.object(forKey: K.Theme.currentTheme) as? String)
+        // Git Me
     }
     
     @IBAction func chatButtonPressed(_ sender: UIButton) {
