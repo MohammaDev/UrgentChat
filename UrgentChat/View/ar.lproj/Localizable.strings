@@ -1,0 +1,11 @@
+/* 
+  File.strings
+  UrgentChat
+
+  Created by Mohammad Alotaibi on 16/07/2020.
+  Copyright © 2020 Mohammad Alotaibi. All rights reserved.
+*/
+
+"Start Chating"        = "ابدأ المحادثة";
+"Enter a Phone Number" = "أدخل رقم الجوال";
+"Paste from Clipboard" = "ألصق من الحافظة";

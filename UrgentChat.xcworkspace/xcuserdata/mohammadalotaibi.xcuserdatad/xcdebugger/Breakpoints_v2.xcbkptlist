@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "632DBB4D-7871-4B94-83BE-A69B1C605F28"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E44B5A82-4AE6-4C5D-B532-D5F679827561"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/FlagPhoneNumber/Sources/FPNCountryListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "FPNCountryListViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E44B5A82-4AE6-4C5D-B532-D5F679827561 - edb0e5b5feb3703f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlagPhoneNumber.FPNCountryListViewController.searchController.getter : __C.UISearchController"
+                  moduleName = "FlagPhoneNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadalotaibi/Desktop/SwiftProjects/UrgentChat/Pods/FlagPhoneNumber/Sources/FPNCountryListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "E44B5A82-4AE6-4C5D-B532-D5F679827561 - 266207bdd959e80b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlagPhoneNumber.FPNCountryListViewController.searchController.setter : __C.UISearchController"
+                  moduleName = "FlagPhoneNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadalotaibi/Desktop/SwiftProjects/UrgentChat/Pods/FlagPhoneNumber/Sources/FPNCountryListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "E44B5A82-4AE6-4C5D-B532-D5F679827561 - 8b59f271e0cdbe38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlagPhoneNumber.FPNCountryListViewController.searchController.modify : __C.UISearchController"
+                  moduleName = "FlagPhoneNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadalotaibi/Desktop/SwiftProjects/UrgentChat/Pods/FlagPhoneNumber/Sources/FPNCountryListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "E44B5A82-4AE6-4C5D-B532-D5F679827561 - 3518dd083cc5a568"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlagPhoneNumber.FPNCountryListViewController.searchController.modify : __C.UISearchController with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "FlagPhoneNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadalotaibi/Desktop/SwiftProjects/UrgentChat/Pods/FlagPhoneNumber/Sources/FPNCountryListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "E44B5A82-4AE6-4C5D-B532-D5F679827561 - 5b3199ce79954872"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlagPhoneNumber.FPNCountryListViewController.init(style: __C.UITableViewStyle) -&gt; FlagPhoneNumber.FPNCountryListViewController"
+                  moduleName = "FlagPhoneNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadalotaibi/Desktop/SwiftProjects/UrgentChat/Pods/FlagPhoneNumber/Sources/FPNCountryListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "422">
+               </Location>
+               <Location
+                  uuid = "E44B5A82-4AE6-4C5D-B532-D5F679827561 - 444a5270e1968838"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlagPhoneNumber.FPNCountryListViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; FlagPhoneNumber.FPNCountryListViewController"
+                  moduleName = "FlagPhoneNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadalotaibi/Desktop/SwiftProjects/UrgentChat/Pods/FlagPhoneNumber/Sources/FPNCountryListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "466">
+               </Location>
+               <Location
+                  uuid = "E44B5A82-4AE6-4C5D-B532-D5F679827561 - edd0514c71f459d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlagPhoneNumber.FPNCountryListViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;FlagPhoneNumber.FPNCountryListViewController&gt;"
+                  moduleName = "FlagPhoneNumber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohammadalotaibi/Desktop/SwiftProjects/UrgentChat/Pods/FlagPhoneNumber/Sources/FPNCountryListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "407">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

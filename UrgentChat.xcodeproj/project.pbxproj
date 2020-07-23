@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D19FB7F1D2F280918F3CC4D /* Pods_UrgentChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A59C100B8FB19377FC5C70 /* Pods_UrgentChat.framework */; };
+		A4F044912AFB67E5591E6DEC /* Pods_UrgentChat_Urgent_Chat_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6F8CAE80FE385DA57409AD /* Pods_UrgentChat_Urgent_Chat_Widget.framework */; };
+		D10BFE8B24AFD923009E8F6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10BFE8A24AFD923009E8F6B /* AppDelegate.swift */; };
+		D10BFE8D24AFD923009E8F6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10BFE8C24AFD923009E8F6B /* SceneDelegate.swift */; };
+		D10BFE8F24AFD923009E8F6B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10BFE8E24AFD923009E8F6B /* HomeViewController.swift */; };
+		D10BFE9224AFD923009E8F6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10BFE9024AFD923009E8F6B /* Main.storyboard */; };
+		D10BFE9424AFD924009E8F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10BFE9324AFD924009E8F6B /* Assets.xcassets */; };
+		D10BFE9724AFD924009E8F6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10BFE9524AFD924009E8F6B /* LaunchScreen.storyboard */; };
+		D11C8DAF24C0ADA500667FFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D11C8DAD24C0ADA500667FFA /* InfoPlist.strings */; };
+		D125F1C824B7AF4F00D0DAF6 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D125F1C724B7AF4F00D0DAF6 /* K.swift */; };
+		D125F1CA24B7BA4400D0DAF6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D125F1C924B7BA4400D0DAF6 /* SettingsViewController.swift */; };
+		D13373B424BC70CF00CC1953 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13373B324BC70CF00CC1953 /* UIActivityIndicatorView.swift */; };
+		D14FA00324BB52AB001A0276 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FA00224BB52AB001A0276 /* Home.swift */; };
+		D14FA00824BB8D05001A0276 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FA00724BB8D05001A0276 /* UIButton.swift */; };
+		D14FA00A24BB8E76001A0276 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FA00924BB8E76001A0276 /* AppManager.swift */; };
+		D14FA00E24BB9776001A0276 /* FPNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FA00D24BB9776001A0276 /* FPNTextField.swift */; };
+		D14FA01024BB9C55001A0276 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FA00F24BB9C55001A0276 /* Settings.swift */; };
+		D152C85824C6503300E00A94 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1884D1F24C610EE000471D5 /* NotificationCenter.framework */; };
+		D152C85B24C6503300E00A94 /* WidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D152C85A24C6503300E00A94 /* WidgetViewController.swift */; };
+		D152C85E24C6503300E00A94 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D152C85C24C6503300E00A94 /* MainInterface.storyboard */; };
+		D152C86224C6503300E00A94 /* Urgent Chat.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D152C85724C6503300E00A94 /* Urgent Chat.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D152C86724C6572500E00A94 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D152C86624C6572500E00A94 /* UIButton.swift */; };
+		D16E9ECB24C66B7E009B9536 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D16E9EC924C66B7E009B9536 /* Localizable.strings */; };
+		D16E9ECF24C66F00009B9536 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D16E9ED124C66F00009B9536 /* InfoPlist.strings */; };
+		D16E9ED424C67096009B9536 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16E9ED324C67096009B9536 /* Widget.swift */; };
+		D16E9ED724C67A97009B9536 /* Dubai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D16E9ED624C67A97009B9536 /* Dubai-Regular.ttf */; };
+		D172C0E124B90B2B001FFFC1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172C0E024B90B2B001FFFC1 /* WebViewController.swift */; };
+		D172C0E324B90FB5001FFFC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D172C0E224B90FB5001FFFC1 /* WebKit.framework */; };
+		D17A7AE224C6602B00F41E5E /* FPNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7AE124C6602B00F41E5E /* FPNTextField.swift */; };
+		D17A7AE424C660E400F41E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17A7AE324C660E400F41E5E /* Assets.xcassets */; };
+		D17A7AE624C6664A00F41E5E /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7AE524C6664A00F41E5E /* K.swift */; };
+		D1D5432E24BFF310000C786A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1D5432C24BFF310000C786A /* Localizable.strings */; };
+		D1DAC69124C105730086D14C /* Dubai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1DAC68E24C105730086D14C /* Dubai-Bold.ttf */; };
+		D1DAC69224C105730086D14C /* Dubai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1DAC68F24C105730086D14C /* Dubai-Light.ttf */; };
+		D1DAC69324C105730086D14C /* Dubai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1DAC69024C105730086D14C /* Dubai-Regular.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D152C86024C6503300E00A94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D10BFE7F24AFD923009E8F6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D152C85624C6503300E00A94;
+			remoteInfo = "Urgent Chat Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1884D2B24C610EE000471D5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D152C86224C6503300E00A94 /* Urgent Chat.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		09317954A670F6D8FC32CBB6 /* Pods-UrgentChat-Urgent Chat Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrgentChat-Urgent Chat Widget.release.xcconfig"; path = "Target Support Files/Pods-UrgentChat-Urgent Chat Widget/Pods-UrgentChat-Urgent Chat Widget.release.xcconfig"; sourceTree = "<group>"; };
+		12A59C100B8FB19377FC5C70 /* Pods_UrgentChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrgentChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6508CE956BE8E1469D7D56F5 /* Pods-UrgentChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrgentChat.debug.xcconfig"; path = "Target Support Files/Pods-UrgentChat/Pods-UrgentChat.debug.xcconfig"; sourceTree = "<group>"; };
+		76CED9C7E5D43E3820372812 /* Pods-UrgentChat-Urgent Chat Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrgentChat-Urgent Chat Widget.debug.xcconfig"; path = "Target Support Files/Pods-UrgentChat-Urgent Chat Widget/Pods-UrgentChat-Urgent Chat Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		AA6C1DA9D2C4AA1D77A63A46 /* Pods_UrgentChat_UrgentChatWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrgentChat_UrgentChatWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA20F5E893F308B4E4C55DC /* Pods-UrgentChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrgentChat.release.xcconfig"; path = "Target Support Files/Pods-UrgentChat/Pods-UrgentChat.release.xcconfig"; sourceTree = "<group>"; };
+		D10BFE8724AFD923009E8F6B /* UrgentChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrgentChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10BFE8A24AFD923009E8F6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D10BFE8C24AFD923009E8F6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D10BFE8E24AFD923009E8F6B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D10BFE9124AFD923009E8F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D10BFE9324AFD924009E8F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D10BFE9624AFD924009E8F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D10BFE9824AFD924009E8F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D11C8DAE24C0ADA500667FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D11C8DB024C0AE0C00667FFA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D125F1C724B7AF4F00D0DAF6 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		D125F1C924B7BA4400D0DAF6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D13373B324BC70CF00CC1953 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		D14FA00224BB52AB001A0276 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		D14FA00724BB8D05001A0276 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D14FA00924BB8E76001A0276 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		D14FA00D24BB9776001A0276 /* FPNTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPNTextField.swift; sourceTree = "<group>"; };
+		D14FA00F24BB9C55001A0276 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D152C85724C6503300E00A94 /* Urgent Chat.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Urgent Chat.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D152C85A24C6503300E00A94 /* WidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewController.swift; sourceTree = "<group>"; };
+		D152C85D24C6503300E00A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D152C85F24C6503300E00A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D152C86624C6572500E00A94 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		D16E9ECA24C66B7E009B9536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = View/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D16E9ECC24C66BD8009B9536 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = View/ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D16E9ED024C66F00009B9536 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D16E9ED224C66F0F009B9536 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D16E9ED324C67096009B9536 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
+		D16E9ED624C67A97009B9536 /* Dubai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dubai-Regular.ttf"; path = "UrgentChat/Fonts/Dubai-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		D172C0E024B90B2B001FFFC1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D172C0E224B90FB5001FFFC1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D17A7AE124C6602B00F41E5E /* FPNTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPNTextField.swift; sourceTree = "<group>"; };
+		D17A7AE324C660E400F41E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D17A7AE524C6664A00F41E5E /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		D1884D1F24C610EE000471D5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		D1D5432A24BFF089000C786A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		D1D5432B24BFF089000C786A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D1D5432D24BFF310000C786A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D1D5432F24BFF36D000C786A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D1DAC68E24C105730086D14C /* Dubai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dubai-Bold.ttf"; path = "../../../../../Downloads/dubai-cufonfonts/Dubai-Bold.ttf"; sourceTree = "<group>"; };
+		D1DAC68F24C105730086D14C /* Dubai-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dubai-Light.ttf"; path = "../../../../../Downloads/dubai-cufonfonts/Dubai-Light.ttf"; sourceTree = "<group>"; };
+		D1DAC69024C105730086D14C /* Dubai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dubai-Regular.ttf"; path = "../../../../../Downloads/dubai-cufonfonts/Dubai-Regular.ttf"; sourceTree = "<group>"; };
+		FF6F8CAE80FE385DA57409AD /* Pods_UrgentChat_Urgent_Chat_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrgentChat_Urgent_Chat_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D10BFE8424AFD923009E8F6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D172C0E324B90FB5001FFFC1 /* WebKit.framework in Frameworks */,
+				0D19FB7F1D2F280918F3CC4D /* Pods_UrgentChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D152C85424C6503300E00A94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D152C85824C6503300E00A94 /* NotificationCenter.framework in Frameworks */,
+				A4F044912AFB67E5591E6DEC /* Pods_UrgentChat_Urgent_Chat_Widget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B38C58B3458CB0EFCA47FC23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6508CE956BE8E1469D7D56F5 /* Pods-UrgentChat.debug.xcconfig */,
+				CDA20F5E893F308B4E4C55DC /* Pods-UrgentChat.release.xcconfig */,
+				76CED9C7E5D43E3820372812 /* Pods-UrgentChat-Urgent Chat Widget.debug.xcconfig */,
+				09317954A670F6D8FC32CBB6 /* Pods-UrgentChat-Urgent Chat Widget.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4E16FBF68BB27C2E4761678 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D172C0E224B90FB5001FFFC1 /* WebKit.framework */,
+				12A59C100B8FB19377FC5C70 /* Pods_UrgentChat.framework */,
+				D1884D1F24C610EE000471D5 /* NotificationCenter.framework */,
+				AA6C1DA9D2C4AA1D77A63A46 /* Pods_UrgentChat_UrgentChatWidget.framework */,
+				FF6F8CAE80FE385DA57409AD /* Pods_UrgentChat_Urgent_Chat_Widget.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D107587B24B3566800736921 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D10BFE9024AFD923009E8F6B /* Main.storyboard */,
+				D10BFE9524AFD924009E8F6B /* LaunchScreen.storyboard */,
+				D1D5432C24BFF310000C786A /* Localizable.strings */,
+				D11C8DAD24C0ADA500667FFA /* InfoPlist.strings */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D107587C24B3569700736921 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D10BFE8E24AFD923009E8F6B /* HomeViewController.swift */,
+				D125F1C924B7BA4400D0DAF6 /* SettingsViewController.swift */,
+				D172C0E024B90B2B001FFFC1 /* WebViewController.swift */,
+				D14FA00124BB5262001A0276 /* Functions */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D10BFE7E24AFD923009E8F6B = {
+			isa = PBXGroup;
+			children = (
+				D10BFE8924AFD923009E8F6B /* UrgentChat */,
+				D152C85924C6503300E00A94 /* Urgent Chat Widget */,
+				D10BFE8824AFD923009E8F6B /* Products */,
+				B38C58B3458CB0EFCA47FC23 /* Pods */,
+				B4E16FBF68BB27C2E4761678 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D10BFE8824AFD923009E8F6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D10BFE8724AFD923009E8F6B /* UrgentChat.app */,
+				D152C85724C6503300E00A94 /* Urgent Chat.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D10BFE8924AFD923009E8F6B /* UrgentChat */ = {
+			isa = PBXGroup;
+			children = (
+				D10BFE8A24AFD923009E8F6B /* AppDelegate.swift */,
+				D10BFE8C24AFD923009E8F6B /* SceneDelegate.swift */,
+				D14FA00424BB5361001A0276 /* Model */,
+				D107587B24B3566800736921 /* View */,
+				D107587C24B3569700736921 /* Controller */,
+				D1D5433024C01318000C786A /* Fonts */,
+				D10BFE9324AFD924009E8F6B /* Assets.xcassets */,
+				D10BFE9824AFD924009E8F6B /* Info.plist */,
+				D125F1C724B7AF4F00D0DAF6 /* K.swift */,
+			);
+			path = UrgentChat;
+			sourceTree = "<group>";
+		};
+		D14FA00124BB5262001A0276 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				D14FA00224BB52AB001A0276 /* Home.swift */,
+				D14FA00F24BB9C55001A0276 /* Settings.swift */,
+				D14FA00724BB8D05001A0276 /* UIButton.swift */,
+				D14FA00D24BB9776001A0276 /* FPNTextField.swift */,
+				D13373B324BC70CF00CC1953 /* UIActivityIndicatorView.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		D14FA00424BB5361001A0276 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D14FA00924BB8E76001A0276 /* AppManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D152C85924C6503300E00A94 /* Urgent Chat Widget */ = {
+			isa = PBXGroup;
+			children = (
+				D17A7AE724C6675000F41E5E /* View */,
+				D17A7AE824C6675A00F41E5E /* Controller */,
+				D16E9ED524C67A56009B9536 /* Fonts */,
+				D17A7AE324C660E400F41E5E /* Assets.xcassets */,
+				D152C85F24C6503300E00A94 /* Info.plist */,
+				D17A7AE524C6664A00F41E5E /* K.swift */,
+				D16E9EC924C66B7E009B9536 /* Localizable.strings */,
+				D16E9ED124C66F00009B9536 /* InfoPlist.strings */,
+			);
+			path = "Urgent Chat Widget";
+			sourceTree = "<group>";
+		};
+		D16E9ED524C67A56009B9536 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D16E9ED624C67A97009B9536 /* Dubai-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D17A7AE724C6675000F41E5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D152C85C24C6503300E00A94 /* MainInterface.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D17A7AE824C6675A00F41E5E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D152C85A24C6503300E00A94 /* WidgetViewController.swift */,
+				D17A7AE924C6677500F41E5E /* Functions */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D17A7AE924C6677500F41E5E /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				D16E9ED324C67096009B9536 /* Widget.swift */,
+				D152C86624C6572500E00A94 /* UIButton.swift */,
+				D17A7AE124C6602B00F41E5E /* FPNTextField.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		D1D5433024C01318000C786A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D1DAC68E24C105730086D14C /* Dubai-Bold.ttf */,
+				D1DAC68F24C105730086D14C /* Dubai-Light.ttf */,
+				D1DAC69024C105730086D14C /* Dubai-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D10BFE8624AFD923009E8F6B /* UrgentChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D10BFE9B24AFD924009E8F6B /* Build configuration list for PBXNativeTarget "UrgentChat" */;
+			buildPhases = (
+				4D0DECB3C58ED5D43D063975 /* [CP] Check Pods Manifest.lock */,
+				D10BFE8324AFD923009E8F6B /* Sources */,
+				D10BFE8424AFD923009E8F6B /* Frameworks */,
+				D10BFE8524AFD923009E8F6B /* Resources */,
+				703CBFD5DDB81D8D6379B0E9 /* [CP] Embed Pods Frameworks */,
+				D1884D2B24C610EE000471D5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D152C86124C6503300E00A94 /* PBXTargetDependency */,
+			);
+			name = UrgentChat;
+			productName = "Right Contact";
+			productReference = D10BFE8724AFD923009E8F6B /* UrgentChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D152C85624C6503300E00A94 /* Urgent Chat Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D152C86324C6503300E00A94 /* Build configuration list for PBXNativeTarget "Urgent Chat Widget" */;
+			buildPhases = (
+				091A3520E6A3B8B9C31EE2B6 /* [CP] Check Pods Manifest.lock */,
+				D152C85324C6503300E00A94 /* Sources */,
+				D152C85424C6503300E00A94 /* Frameworks */,
+				D152C85524C6503300E00A94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Urgent Chat Widget";
+			productName = "Urgent Chat Widget";
+			productReference = D152C85724C6503300E00A94 /* Urgent Chat.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D10BFE7F24AFD923009E8F6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Mohammad Alotaibi";
+				TargetAttributes = {
+					D10BFE8624AFD923009E8F6B = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					D152C85624C6503300E00A94 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = D10BFE8224AFD923009E8F6B /* Build configuration list for PBXProject "UrgentChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+			);
+			mainGroup = D10BFE7E24AFD923009E8F6B;
+			productRefGroup = D10BFE8824AFD923009E8F6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D10BFE8624AFD923009E8F6B /* UrgentChat */,
+				D152C85624C6503300E00A94 /* Urgent Chat Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D10BFE8524AFD923009E8F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D5432E24BFF310000C786A /* Localizable.strings in Resources */,
+				D1DAC69324C105730086D14C /* Dubai-Regular.ttf in Resources */,
+				D11C8DAF24C0ADA500667FFA /* InfoPlist.strings in Resources */,
+				D10BFE9724AFD924009E8F6B /* LaunchScreen.storyboard in Resources */,
+				D1DAC69124C105730086D14C /* Dubai-Bold.ttf in Resources */,
+				D10BFE9424AFD924009E8F6B /* Assets.xcassets in Resources */,
+				D10BFE9224AFD923009E8F6B /* Main.storyboard in Resources */,
+				D1DAC69224C105730086D14C /* Dubai-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D152C85524C6503300E00A94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17A7AE424C660E400F41E5E /* Assets.xcassets in Resources */,
+				D16E9ECF24C66F00009B9536 /* InfoPlist.strings in Resources */,
+				D16E9ECB24C66B7E009B9536 /* Localizable.strings in Resources */,
+				D152C85E24C6503300E00A94 /* MainInterface.storyboard in Resources */,
+				D16E9ED724C67A97009B9536 /* Dubai-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		091A3520E6A3B8B9C31EE2B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UrgentChat-Urgent Chat Widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D0DECB3C58ED5D43D063975 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UrgentChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		703CBFD5DDB81D8D6379B0E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UrgentChat/Pods-UrgentChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UrgentChat/Pods-UrgentChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UrgentChat/Pods-UrgentChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D10BFE8324AFD923009E8F6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D10BFE8F24AFD923009E8F6B /* HomeViewController.swift in Sources */,
+				D172C0E124B90B2B001FFFC1 /* WebViewController.swift in Sources */,
+				D125F1C824B7AF4F00D0DAF6 /* K.swift in Sources */,
+				D10BFE8B24AFD923009E8F6B /* AppDelegate.swift in Sources */,
+				D125F1CA24B7BA4400D0DAF6 /* SettingsViewController.swift in Sources */,
+				D10BFE8D24AFD923009E8F6B /* SceneDelegate.swift in Sources */,
+				D14FA00E24BB9776001A0276 /* FPNTextField.swift in Sources */,
+				D13373B424BC70CF00CC1953 /* UIActivityIndicatorView.swift in Sources */,
+				D14FA00A24BB8E76001A0276 /* AppManager.swift in Sources */,
+				D14FA00324BB52AB001A0276 /* Home.swift in Sources */,
+				D14FA01024BB9C55001A0276 /* Settings.swift in Sources */,
+				D14FA00824BB8D05001A0276 /* UIButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D152C85324C6503300E00A94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D152C85B24C6503300E00A94 /* WidgetViewController.swift in Sources */,
+				D17A7AE624C6664A00F41E5E /* K.swift in Sources */,
+				D16E9ED424C67096009B9536 /* Widget.swift in Sources */,
+				D17A7AE224C6602B00F41E5E /* FPNTextField.swift in Sources */,
+				D152C86724C6572500E00A94 /* UIButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D152C86124C6503300E00A94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D152C85624C6503300E00A94 /* Urgent Chat Widget */;
+			targetProxy = D152C86024C6503300E00A94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D10BFE9024AFD923009E8F6B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D10BFE9124AFD923009E8F6B /* Base */,
+				D1D5432A24BFF089000C786A /* ar */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D10BFE9524AFD924009E8F6B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D10BFE9624AFD924009E8F6B /* Base */,
+				D1D5432B24BFF089000C786A /* ar */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D11C8DAD24C0ADA500667FFA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D11C8DAE24C0ADA500667FFA /* Base */,
+				D11C8DB024C0AE0C00667FFA /* ar */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D152C85C24C6503300E00A94 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D152C85D24C6503300E00A94 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		D16E9EC924C66B7E009B9536 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D16E9ECA24C66B7E009B9536 /* Base */,
+				D16E9ECC24C66BD8009B9536 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D16E9ED124C66F00009B9536 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D16E9ED024C66F00009B9536 /* ar */,
+				D16E9ED224C66F0F009B9536 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D1D5432C24BFF310000C786A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1D5432D24BFF310000C786A /* Base */,
+				D1D5432F24BFF36D000C786A /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D10BFE9924AFD924009E8F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		D10BFE9A24AFD924009E8F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D10BFE9C24AFD924009E8F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6508CE956BE8E1469D7D56F5 /* Pods-UrgentChat.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PGQHDLH8Y4;
+				INFOPLIST_FILE = UrgentChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MohammaDevt.UrgentChat;
+				PRODUCT_NAME = UrgentChat;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D10BFE9D24AFD924009E8F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA20F5E893F308B4E4C55DC /* Pods-UrgentChat.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PGQHDLH8Y4;
+				INFOPLIST_FILE = UrgentChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MohammaDevt.UrgentChat;
+				PRODUCT_NAME = UrgentChat;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D152C86424C6503300E00A94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76CED9C7E5D43E3820372812 /* Pods-UrgentChat-Urgent Chat Widget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PGQHDLH8Y4;
+				INFOPLIST_FILE = "Urgent Chat Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MohammaDevt.UrgentChat.Urgent-Chat-Widget";
+				PRODUCT_NAME = "Urgent Chat";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D152C86524C6503300E00A94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09317954A670F6D8FC32CBB6 /* Pods-UrgentChat-Urgent Chat Widget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PGQHDLH8Y4;
+				INFOPLIST_FILE = "Urgent Chat Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MohammaDevt.UrgentChat.Urgent-Chat-Widget";
+				PRODUCT_NAME = "Urgent Chat";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D10BFE8224AFD923009E8F6B /* Build configuration list for PBXProject "UrgentChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D10BFE9924AFD924009E8F6B /* Debug */,
+				D10BFE9A24AFD924009E8F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D10BFE9B24AFD924009E8F6B /* Build configuration list for PBXNativeTarget "UrgentChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D10BFE9C24AFD924009E8F6B /* Debug */,
+				D10BFE9D24AFD924009E8F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D152C86324C6503300E00A94 /* Build configuration list for PBXNativeTarget "Urgent Chat Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D152C86424C6503300E00A94 /* Debug */,
+				D152C86524C6503300E00A94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D10BFE7F24AFD923009E8F6B /* Project object */;
+}

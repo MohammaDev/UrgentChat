@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  UrgentChat
+
+  Created by Mohammad Alotaibi on 21/07/2020.
+  Copyright © 2020 Mohammad Alotaibi. All rights reserved.
+*/
+"Start Chating"              = "Start Chating";
+"Paste from Clipboard"       = "Paste from Clipboard";
+"Please copy a phone number" = "Please copy a phone number";

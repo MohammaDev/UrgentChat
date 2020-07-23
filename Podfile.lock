@@ -1,0 +1,22 @@
+PODS:
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - FontBlaster (5.1.1)
+
+DEPENDENCIES:
+  - FlagPhoneNumber
+  - FontBlaster
+
+SPEC REPOS:
+  trunk:
+    - FlagPhoneNumber
+    - FontBlaster
+
+SPEC CHECKSUMS:
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  FontBlaster: 8897ebdbb4b6ace3ab78c92b665d88c954f19e4a
+
+PODFILE CHECKSUM: 25aa24a140a51d8a90bd7d760fcc7a138361827f
+
+COCOAPODS: 1.9.1

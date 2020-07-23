@@ -1,0 +1,6 @@
+framework module Pods_UrgentChat {
+  umbrella header "Pods-UrgentChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Just Paste It"; ObjectID = "5BE-lz-Sva"; */
+"5BE-lz-Sva.text" = "ألصق وراسل";
+
+/* Class = "UILabel"; text = "System mode"; ObjectID = "9r2-m6-KpJ"; */
+"9r2-m6-KpJ.text" = "نمط النظام";
+
+/* Class = "UILabel"; text = "Dark mode"; ObjectID = "Chr-qM-n3K"; */
+"Chr-qM-n3K.text" = "النمط الداكن";
+
+/* Class = "UILabel"; text = "Credits"; ObjectID = "LLE-hw-2ZZ"; */
+"LLE-hw-2ZZ.text" = "الاعتمادات";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "Pwc-YX-xXU"; */
+"Pwc-YX-xXU.text" = "سياسة الخصوصية";
+
+/* Class = "UITableViewSection"; footerTitle = " "; ObjectID = "V6b-UF-V2h"; */
+"V6b-UF-V2h.footerTitle" = "الإصدار";
+
+/* Class = "UITableViewSection"; headerTitle = "Theme"; ObjectID = "V6b-UF-V2h"; */
+"V6b-UF-V2h.headerTitle" = "النمط";
+
+/* Class = "UILabel"; text = "Light mode"; ObjectID = "W78-7m-JGS"; */
+"W78-7m-JGS.text" = "النمط الفاتح";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "XZS-1S-sm1"; */
+"XZS-1S-sm1.title" = "Item";
+
+/* Class = "UITableViewSection"; headerTitle = "LEGAL"; ObjectID = "Xgd-0A-Xpm"; */
+"Xgd-0A-Xpm.headerTitle" = "قانوني";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "eag-EQ-kFD"; */
+"eag-EQ-kFD.title" = "الإعدادات";
+
+/* Class = "UIButton"; normalTitle = "Start Chating"; ObjectID = "k0E-ZC-UOF"; */
+"k0E-ZC-UOF.normalTitle" = "Start Chating";
+
+/* Class = "UILabel"; text = "UrgentChat"; ObjectID = "zws-w2-5vW"; */
+"zws-w2-5vW.text" = "دردشة عاجلة";
