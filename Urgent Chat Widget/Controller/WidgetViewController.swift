@@ -17,16 +17,18 @@ class WidgetViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         self.setBouncing()
-        textField.setFlagSize()
-        chatButton.setDubaiFont()
         self.changeButtonStatus()
+
+        textField.setFlagSize()
         textField.delegate = self
         textField.setClearButton()
-        chatButton.setCornerRadius()
         textField.clearPlaceholder()
         textField.ForceAlignmentToLeft()
-        // Mohammad Abdu
+        
+        chatButton.setDubaiFont()
+        chatButton.setCornerRadius()
     }
         
     @IBAction func chatButtonPressed(_ sender: UIButton) {
@@ -37,7 +39,7 @@ class WidgetViewController: UIViewController, NCWidgetProviding {
             let number = textField.getFormattedPhoneNumber(format: .E164)!
             let phoneNumber = number.replacingOccurrences(of: K.plusSign, with: K.empty)
             guard let url   = URL(string: "\(K.URL.whatsapp)\(phoneNumber)") else { return }
-            openURL(url)
+            self.openURL(url)
         }
     }
 }

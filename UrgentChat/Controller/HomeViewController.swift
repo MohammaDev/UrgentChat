@@ -27,15 +27,18 @@ class HomeViewController: UIViewController {
         self.setBouncing()
         self.setObservers()
         self.setDubaiFont()
-        textField.setFlagSize()
         self.changeButtonStatus()
+        self.setActionForRightBarButton()
+        self.changeTheme(to: userDefaults.object(forKey: K.Theme.currentTheme) as? String)
+
+        textField.setFlagSize()
         textField.delegate = self
         textField.setClearButton()
-        chatButton.setCornerRadius()
         textField.ForceAlignmentToLeft()
-        self.setActionForRightBarButton()
+        
+        chatButton.setCornerRadius()
+
         SettingsViewController.delegate = self
-        self.changeTheme(to: userDefaults.object(forKey: K.Theme.currentTheme) as? String)
     }
     
     @IBAction func chatButtonPressed(_ sender: UIButton) {
