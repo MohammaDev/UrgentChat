@@ -61,10 +61,10 @@ extension HomeViewController {
     
     func setDubaiFont() {
         if isArabic {
-            chatButton.titleLabel?.font = UIFont(name: K.Fonts.regular, size: 23)
-            urgentChatLable.font = UIFont(name: K.Fonts.bold, size: 40)
-            encourageLable.font = UIFont(name: K.Fonts.light, size: 23)
-            lablesStack.spacing = 0
+//            chatButton.titleLabel?.font = UIFont(name: K.Fonts.regular, size: 23)
+//            urgentChatLable.font = UIFont(name: K.Fonts.bold, size: 40)
+//            encourageLable.font = UIFont(name: K.Fonts.light, size: 23)
+//            lablesStack.spacing = 0
         }
     }
     
@@ -93,19 +93,41 @@ extension HomeViewController {
     
     func performChange(_ kind : String) {
         
-        textField.layer.borderWidth     =  1.0
-        textField.layer.cornerRadius    =  5.0
-        textField.layer.masksToBounds   =  true
+        self.navigationItem.rightBarButtonItem?.image = UIImage(named: "\(kind)\(K.Image.gear)")?.withRenderingMode(.alwaysOriginal)
+        
         imageView.image                 =  UIImage(named: "\(kind)\(K.Image.wallpaper)")
         encourageLable.textColor        =  UIColor(named: "\(kind)\(K.Lable.textColor)")
         urgentChatLable.textColor       =  UIColor(named: "\(kind)\(K.Lable.textColor)")
+        
+        textField.layer.borderWidth     =  1.0
+        textField.layer.cornerRadius    =  5.0
+        textField.layer.masksToBounds   =  true
         textField.textColor             =  UIColor(named: "\(kind)\(K.TextField.textColor)")
-        chatButton.backgroundColor      =  UIColor(named: "\(kind)\(K.Button.backgroundColor)")
         textField.backgroundColor       =  UIColor(named: "\(kind)\(K.TextField.backgroundColor)")
         textField.layer.borderColor     =  UIColor(named: "\(kind)\(K.TextField.borderColor)")?.cgColor
         textField.attributedPlaceholder =  NSAttributedString(string: textField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "\(kind)\(K.TextField.placeholderColor)")!])
+        
+        chatButton.backgroundColor      =  UIColor(named: "\(kind)\(K.Button.backgroundColor)")
         chatButton.setTitleColor(UIColor(named: "\(kind)\(K.Button.titleColor)"), for: .normal)
-        self.navigationItem.rightBarButtonItem?.image = UIImage(named: "\(kind)\(K.Image.gear)")?.withRenderingMode(.alwaysOriginal)
+        
+        cardViewController.view.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+        cardViewController.handleArea.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+        
+        cardViewController.historyButton.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+        cardViewController.historyButton.setTitleColor(UIColor(named: "\(kind)\(K.TextField.textColor)"), for: .normal)
+        
+        cardViewController.templatesButton.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+        cardViewController.templatesButton.setTitleColor(UIColor(named: "\(kind)\(K.TextField.textColor)"), for: .normal)
+        
+        cardViewController.titleLable.textColor = UIColor(named: "\(kind)\(K.TextField.textColor)")
+        
+        cardViewController.titleBackground.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+
+        cardViewController.descriptionBackground.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+        
+        cardViewController.tableView.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+
+        
         userDefaults.set(kind, forKey: K.Theme.currentTheme)
     }
 }

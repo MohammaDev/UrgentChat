@@ -9,8 +9,9 @@
 import UIKit
 import FlagPhoneNumber
 
-            
+
 class HomeViewController: UIViewController {
+    
     
     @IBOutlet weak var chatButton: UIButton!
     @IBOutlet weak var textField: FPNTextField!
@@ -18,37 +19,78 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var urgentChatLable: UILabel!
     @IBOutlet weak var encourageLable: UILabel!
     @IBOutlet weak var lablesStack: UIStackView!
-        
+    
     let userDefaults = UserDefaults.standard
+    
+    enum CardState {
+        case expanded
+        case collapsed
+    }
+    
+    var cardViewController:CardViewController!
+    lazy var cardHeight:CGFloat = {return (self.view.frame.size.height-120)/2}()
+    let cardHandleAreaHeight:CGFloat = 65
+    var cardVisible = false
+    var nextState:CardState {return cardVisible ? .collapsed : .expanded}
+    var runningAnimations = [UIViewPropertyAnimator]()
+    var animationProgressWhenInterrupted:CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupCard()
         self.setBouncing()
         self.setObservers()
         self.setDubaiFont()
         self.changeButtonStatus()
         self.setActionForRightBarButton()
         self.changeTheme(to: userDefaults.object(forKey: K.Theme.currentTheme) as? String)
-
+        
         textField.setFlagSize()
         textField.delegate = self
         textField.setClearButton()
         textField.ForceAlignmentToLeft()
         
         chatButton.setCornerRadius()
-
+        
+        cardViewController.delegate = self
         SettingsViewController.delegate = self
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false 
+        view.addGestureRecognizer(tap)
+    }
+    
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func chatButtonPressed(_ sender: UIButton) {
-       
         if chatButton.titleLabel?.text == NSLocalizedString(K.pasteFromClipBoard, comment: K.empty) {
             textField.set(phoneNumber: UIPasteboard.general.string!)
         }
         else{
             let number = textField.getFormattedPhoneNumber(format: .E164)!
             AppManager.openURL(number)
+            
+            
+            let currentDateTime = Date()
+            let formatter = DateFormatter()
+            formatter.timeStyle = .short
+            formatter.dateStyle = .short
+            
+            let newRecord = HistoryRecord(
+                recordImage: Image(withImage: textField.flagButton.currentImage!),
+                recordNumber: textField.text!,
+                recordDate: formatter.string(from: currentDateTime)
+            )
+            
+            cardViewController.arrayOfRecords.append(newRecord)
+            cardViewController.arrayOfRecords.reverse()
+            userDefaults.set(try? PropertyListEncoder().encode(cardViewController.arrayOfRecords), forKey: "Records")
+            cardViewController.tableView.reloadData()
+            
         }
         self.toggleKeyboard()
     }
@@ -71,18 +113,25 @@ class HomeViewController: UIViewController {
         }
     }
 }
+//MARK: - CardDelegate
+extension HomeViewController: CardViewControllerDelegate {
+    func didSelectRecord(phoneNumber : String) {
+        textField.set(phoneNumber: phoneNumber)
+    }
+}
 
 //MARK: - SettingsViewControllerDelegate
 extension HomeViewController : SettingsViewControllerDelegate {
     
     func didUpdateTheme(_ SettingsViewController: UITableViewController, _ selectedTheme: String) {
         self.changeTheme(to: selectedTheme)
+        cardViewController.tableView.reloadData()
     }
 }
 
 //MARK: - FPNTextFieldDelegate
 extension HomeViewController : FPNTextFieldDelegate {
- 
+    
     /// Lets you know when the phone number is valid or not. Once a phone number is valid, you can get it in severals formats (E164, International, National, RFC3966)
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
         self.changeButtonStatus()
@@ -100,4 +149,98 @@ extension HomeViewController : FPNTextFieldDelegate {
     
     /// Lets you know when a country is selected
     func fpnDidSelectCountry(name: String, dialCode: String, code: String) {}
+}
+
+//MARK: - SettingsViewControllerDelegate
+extension HomeViewController {
+    func setupCard() {
+        cardViewController = CardViewController(nibName:"CardViewController", bundle:nil)
+        self.addChild(cardViewController)
+        self.view.addSubview(cardViewController.view)
+        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - 106 - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
+        cardViewController.view.clipsToBounds = true
+        cardViewController.view.layer.cornerRadius = 50
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardTap(recognzier:)))
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardPan(recognizer:)))
+        cardViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
+        cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    @objc
+    func handleCardTap(recognzier:UITapGestureRecognizer) {
+        switch recognzier.state {
+        case .ended:
+            animateTransitionIfNeeded(state: nextState, duration: 0.9)
+        default:
+            break
+        }
+    }
+    
+    @objc
+    func handleCardPan (recognizer:UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            startInteractiveTransition(state: nextState, duration: 0.9)
+        case .changed:
+            let translation = recognizer.translation(in: self.cardViewController.handleArea)
+            var fractionComplete = translation.y / cardHeight
+            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
+            updateInteractiveTransition(fractionCompleted: fractionComplete)
+        case .ended:
+            continueInteractiveTransition()
+        default:
+            break
+        }
+    }
+    
+    func animateTransitionIfNeeded (state:CardState, duration:TimeInterval) {
+        if runningAnimations.isEmpty {
+            let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
+                switch state {
+                case .expanded:
+                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
+                case .collapsed:
+                    self.cardViewController.view.frame.origin.y = self.view.frame.height - 106 - self.cardHandleAreaHeight
+                }
+            }
+            frameAnimator.addCompletion { _ in
+                self.cardVisible = !self.cardVisible
+                self.runningAnimations.removeAll()
+            }
+            frameAnimator.startAnimation()
+            runningAnimations.append(frameAnimator)
+            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
+                switch state {
+                case .expanded:
+                    self.cardViewController.view.layer.cornerRadius = 50
+                case .collapsed:
+                    self.cardViewController.view.layer.cornerRadius = 50
+                }
+            }
+            cornerRadiusAnimator.startAnimation()
+            runningAnimations.append(cornerRadiusAnimator)
+        }
+    }
+    
+    func startInteractiveTransition(state:CardState, duration:TimeInterval) {
+        if runningAnimations.isEmpty {
+            animateTransitionIfNeeded(state: state, duration: duration)
+        }
+        for animator in runningAnimations {
+            animator.pauseAnimation()
+            animationProgressWhenInterrupted = animator.fractionComplete
+        }
+    }
+    
+    func updateInteractiveTransition(fractionCompleted:CGFloat) {
+        for animator in runningAnimations {
+            animator.fractionComplete = fractionCompleted + animationProgressWhenInterrupted
+        }
+    }
+    
+    func continueInteractiveTransition (){
+        for animator in runningAnimations {
+            animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+        }
+    }
 }

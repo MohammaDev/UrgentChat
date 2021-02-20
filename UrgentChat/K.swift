@@ -56,6 +56,10 @@ struct K {
         static let backgroundColor = "ButtonBackgroundColor"
     }
     
+    struct Card {
+        static let backgroundColor = "CardBackgroundColor"
+    }
+    
     struct Image {
         static let gear        = "GearImage"
         static let clearButton = "CrossImage"

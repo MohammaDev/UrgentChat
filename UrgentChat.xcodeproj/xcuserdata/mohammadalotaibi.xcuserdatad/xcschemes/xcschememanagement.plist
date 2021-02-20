@@ -7,12 +7,12 @@
 		<key>Urgent Chat Widget.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>UrgentChat.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 		<key>UrgentChatTodayExtension.xcscheme_^#shared#^_</key>
 		<dict>
@@ -38,6 +38,19 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D10BFE8624AFD923009E8F6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D152C85624C6503300E00A94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
