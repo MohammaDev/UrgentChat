@@ -63,10 +63,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-kX-z1i" userLabel="Trash Button">
-                            <rect key="frame" x="369" y="89" width="20" height="22"/>
+                            <rect key="frame" x="367" y="89" width="22" height="20"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="22" id="98p-Ow-uAq"/>
-                                <constraint firstAttribute="width" constant="20" id="9ru-1Z-QLW"/>
+                                <constraint firstAttribute="height" constant="20" id="98p-Ow-uAq"/>
+                                <constraint firstAttribute="width" constant="22" id="9ru-1Z-QLW"/>
                             </constraints>
                             <color key="tintColor" name="red"/>
                             <state key="normal" image="trash" catalog="system"/>

@@ -161,10 +161,14 @@ extension HomeViewController {
         cardViewController.view.layer.cornerRadius = 50
         cardViewController.arrowImage.image = UIImage(named: "CardUpArrowImage")
         cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - 95 - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardTap(recognzier:)))
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardPan(recognizer:)))
-        cardViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
+        cardViewController.handleArea.addGestureRecognizer(getTapGesture())
         cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
+        self.cardViewController.historyButton.addGestureRecognizer(getTapGesture())
+    }
+    
+    func getTapGesture() -> UITapGestureRecognizer {
+        return UITapGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardTap(recognzier:)))
     }
     
     @objc
@@ -201,9 +205,11 @@ extension HomeViewController {
                 case .expanded:
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
                     self.cardViewController.arrowImage.image = UIImage(named: "CardDownArrowImage")
+                    self.cardViewController.historyButton.gestureRecognizers?.removeAll()
                 case .collapsed:
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - 95 - self.cardHandleAreaHeight
                     self.cardViewController.arrowImage.image = UIImage(named: "CardUpArrowImage")
+                    self.cardViewController.historyButton.addGestureRecognizer(self.getTapGesture())
                 }
             }
             frameAnimator.addCompletion { _ in
