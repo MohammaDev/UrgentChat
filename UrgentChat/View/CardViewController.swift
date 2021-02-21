@@ -15,15 +15,12 @@ protocol CardViewControllerDelegate {
 class CardViewController: UIViewController {
 
     @IBOutlet weak var handleArea: UIView!
+    @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var historyButton: UIButton!
     @IBOutlet weak var templatesButton: UIButton!
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var descriptionLable: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var titleBackground: UIView!
-    
-    @IBOutlet weak var descriptionBackground: UIView!
     
     let userDefaults = UserDefaults.standard
     var arrayOfRecords = [HistoryRecord]()

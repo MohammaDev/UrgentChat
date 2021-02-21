@@ -121,10 +121,6 @@ extension HomeViewController {
         
         cardViewController.titleLable.textColor = UIColor(named: "\(kind)\(K.TextField.textColor)")
         
-        cardViewController.titleBackground.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
-
-        cardViewController.descriptionBackground.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
-        
         cardViewController.tableView.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
 
         

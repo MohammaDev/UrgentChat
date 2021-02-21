@@ -157,9 +157,10 @@ extension HomeViewController {
         cardViewController = CardViewController(nibName:"CardViewController", bundle:nil)
         self.addChild(cardViewController)
         self.view.addSubview(cardViewController.view)
-        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - 106 - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
         cardViewController.view.clipsToBounds = true
         cardViewController.view.layer.cornerRadius = 50
+        cardViewController.arrowImage.image = UIImage(named: "CardUpArrowImage")
+        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - 95 - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardTap(recognzier:)))
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardPan(recognizer:)))
         cardViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
@@ -170,7 +171,7 @@ extension HomeViewController {
     func handleCardTap(recognzier:UITapGestureRecognizer) {
         switch recognzier.state {
         case .ended:
-            animateTransitionIfNeeded(state: nextState, duration: 0.9)
+            animateTransitionIfNeeded(state: nextState, duration: 0.5)
         default:
             break
         }
@@ -180,7 +181,7 @@ extension HomeViewController {
     func handleCardPan (recognizer:UIPanGestureRecognizer) {
         switch recognizer.state {
         case .began:
-            startInteractiveTransition(state: nextState, duration: 0.9)
+            startInteractiveTransition(state: nextState, duration: 0.5)
         case .changed:
             let translation = recognizer.translation(in: self.cardViewController.handleArea)
             var fractionComplete = translation.y / cardHeight
@@ -199,8 +200,10 @@ extension HomeViewController {
                 switch state {
                 case .expanded:
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
+                    self.cardViewController.arrowImage.image = UIImage(named: "CardDownArrowImage")
                 case .collapsed:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height - 106 - self.cardHandleAreaHeight
+                    self.cardViewController.view.frame.origin.y = self.view.frame.height - 95 - self.cardHandleAreaHeight
+                    self.cardViewController.arrowImage.image = UIImage(named: "CardUpArrowImage")
                 }
             }
             frameAnimator.addCompletion { _ in

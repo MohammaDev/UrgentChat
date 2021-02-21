@@ -12,13 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="UrgentChat" customModuleProvider="target">
             <connections>
-                <outlet property="descriptionBackground" destination="wtb-Oz-WVx" id="dro-gH-yVW"/>
+                <outlet property="arrowImage" destination="Ohr-TW-QIK" id="BBr-bY-xRZ"/>
                 <outlet property="descriptionLable" destination="dw1-jr-EIY" id="77y-Bc-gyE"/>
                 <outlet property="handleArea" destination="mjI-zk-af2" id="Xzy-oQ-O1c"/>
                 <outlet property="historyButton" destination="0cn-AW-hOf" id="eXi-zn-utd"/>
-                <outlet property="tableView" destination="zmD-mp-RXa" id="iRA-gw-wbg"/>
+                <outlet property="tableView" destination="Hpu-cr-Hve" id="sjX-pU-KNB"/>
                 <outlet property="templatesButton" destination="98g-OW-726" id="bjv-8L-sf2"/>
-                <outlet property="titleBackground" destination="Maz-Sf-quh" id="d04-ip-rsR"/>
                 <outlet property="titleLable" destination="BHr-6L-qDi" id="7N7-1M-oYy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,137 +28,119 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjI-zk-af2" userLabel="handle area">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="47"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bm-ph-2XB">
-                            <rect key="frame" x="177" y="22" width="60" height="3"/>
-                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-AW-hOf" customClass="RoundedButton" customModule="UrgentChat" customModuleProvider="target">
+                            <rect key="frame" x="70" y="40" width="58" height="34"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="3" id="2fW-Md-XIi"/>
-                                <constraint firstAttribute="width" constant="60" id="EV7-fI-xFf"/>
+                                <constraint firstAttribute="height" constant="34" id="YF4-ax-QRe"/>
                             </constraints>
-                        </view>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="tintColor" name="DynamicTextFieldBorderColor"/>
+                            <state key="normal" title="History">
+                                <color key="titleColor" name="DynamicTextFieldTextColor"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98g-OW-726" customClass="RoundedButton" customModule="UrgentChat" customModuleProvider="target">
+                            <rect key="frame" x="261" y="40" width="83" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="fL8-NV-Pzs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="tintColor" name="DynamicTextFieldBorderColor"/>
+                            <state key="normal" title="Templates">
+                                <color key="titleColor" name="DynamicTextFieldTextColor"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHr-6L-qDi" userLabel="Title Label">
+                            <rect key="frame" x="37" y="90" width="307" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="XOZ-oM-AbW"/>
+                                <constraint firstAttribute="width" constant="307" id="Ysm-mp-Hbo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-kX-z1i" userLabel="Trash Button">
+                            <rect key="frame" x="369" y="89" width="20" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="98p-Ow-uAq"/>
+                                <constraint firstAttribute="width" constant="20" id="9ru-1Z-QLW"/>
+                            </constraints>
+                            <color key="tintColor" name="red"/>
+                            <state key="normal" image="trash" catalog="system"/>
+                            <connections>
+                                <action selector="trashButtonPressed:" destination="-1" eventType="touchUpInside" id="wrn-7M-A1E"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardUpArrowImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ohr-TW-QIK">
+                            <rect key="frame" x="174" y="5" width="66" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="5xJ-ey-MN2"/>
+                                <constraint firstAttribute="width" constant="66" id="Knf-MI-lVY"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" name="DynamicCardBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="47" id="AUu-O7-fNJ"/>
-                        <constraint firstItem="3Bm-ph-2XB" firstAttribute="centerX" secondItem="mjI-zk-af2" secondAttribute="centerX" id="Fbm-RR-bpe"/>
-                        <constraint firstItem="3Bm-ph-2XB" firstAttribute="centerY" secondItem="mjI-zk-af2" secondAttribute="centerY" id="SKC-bK-ocm"/>
+                        <constraint firstItem="98g-OW-726" firstAttribute="top" secondItem="mjI-zk-af2" secondAttribute="top" constant="40" id="4eW-JB-n6Y"/>
+                        <constraint firstItem="sWT-kX-z1i" firstAttribute="top" secondItem="mjI-zk-af2" secondAttribute="top" constant="89" id="69b-LS-5ar"/>
+                        <constraint firstItem="Ohr-TW-QIK" firstAttribute="leading" secondItem="mjI-zk-af2" secondAttribute="leading" constant="174" id="6T7-Qr-QYH"/>
+                        <constraint firstAttribute="trailing" secondItem="Ohr-TW-QIK" secondAttribute="trailing" constant="174" id="7WE-2F-A7B"/>
+                        <constraint firstAttribute="height" constant="111" id="W7s-ad-M7q"/>
+                        <constraint firstItem="0cn-AW-hOf" firstAttribute="leading" secondItem="mjI-zk-af2" secondAttribute="leading" constant="70" id="WIx-wk-lq2"/>
+                        <constraint firstItem="BHr-6L-qDi" firstAttribute="leading" secondItem="mjI-zk-af2" secondAttribute="leading" constant="37" id="XXZ-hj-br3"/>
+                        <constraint firstAttribute="trailing" secondItem="98g-OW-726" secondAttribute="trailing" constant="70" id="fGv-Bk-nCh"/>
+                        <constraint firstAttribute="trailing" secondItem="sWT-kX-z1i" secondAttribute="trailing" constant="25" id="fqk-Tw-toe"/>
+                        <constraint firstItem="BHr-6L-qDi" firstAttribute="top" secondItem="0cn-AW-hOf" secondAttribute="bottom" constant="16" id="lRU-pw-brD"/>
+                        <constraint firstItem="0cn-AW-hOf" firstAttribute="top" secondItem="mjI-zk-af2" secondAttribute="top" constant="40" id="w65-y8-MK5"/>
+                        <constraint firstItem="Ohr-TW-QIK" firstAttribute="top" secondItem="mjI-zk-af2" secondAttribute="top" constant="5" id="x9O-uz-LDx"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-AW-hOf" customClass="RoundedButton" customModule="UrgentChat" customModuleProvider="target">
-                    <rect key="frame" x="70" y="47" width="58" height="34"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hpu-cr-Hve">
+                    <rect key="frame" x="20" y="149" width="337" height="217"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="Ajh-YY-mIF"/>
+                        <constraint firstAttribute="height" constant="217" id="fU6-UN-eOE"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <color key="tintColor" name="DynamicTextFieldBorderColor"/>
-                    <state key="normal" title="History">
-                        <color key="titleColor" name="DynamicTextFieldTextColor"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98g-OW-726" customClass="RoundedButton" customModule="UrgentChat" customModuleProvider="target">
-                    <rect key="frame" x="261" y="47" width="83" height="34"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw1-jr-EIY" userLabel="Description Label">
+                    <rect key="frame" x="37" y="112" width="307" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="aZb-3B-Nbe"/>
+                        <constraint firstAttribute="width" constant="307" id="keZ-yj-qDg"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <color key="tintColor" name="DynamicTextFieldBorderColor"/>
-                    <state key="normal" title="Templates">
-                        <color key="titleColor" name="DynamicTextFieldTextColor"/>
-                    </state>
-                </button>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A6D-WQ-yGT">
-                    <rect key="frame" x="20" y="93" width="337" height="273"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Maz-Sf-quh" userLabel="Title Bakcground">
-                            <rect key="frame" x="0.0" y="0.0" width="337" height="25"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHr-6L-qDi" userLabel="Title Label">
-                                    <rect key="frame" x="13" y="0.0" width="324" height="25"/>
-                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" name="DynamicCardBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="BHr-6L-qDi" secondAttribute="trailing" id="7cV-a8-gr6"/>
-                                <constraint firstAttribute="height" constant="25" id="SIT-oO-D1o"/>
-                                <constraint firstItem="BHr-6L-qDi" firstAttribute="leading" secondItem="Maz-Sf-quh" secondAttribute="leading" constant="13" id="XtA-lp-gIy"/>
-                                <constraint firstItem="BHr-6L-qDi" firstAttribute="top" secondItem="Maz-Sf-quh" secondAttribute="top" id="YoX-4L-rTa"/>
-                                <constraint firstAttribute="bottom" secondItem="BHr-6L-qDi" secondAttribute="bottom" id="ZG4-5N-sYX"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtb-Oz-WVx" userLabel="Description Bakcground">
-                            <rect key="frame" x="0.0" y="33" width="337" height="14.5"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw1-jr-EIY" userLabel="Description Label">
-                                    <rect key="frame" x="13" y="0.0" width="324" height="14.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" systemColor="systemGrayColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" name="DynamicCardBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="dw1-jr-EIY" secondAttribute="trailing" id="Jab-Ig-gFI"/>
-                                <constraint firstItem="dw1-jr-EIY" firstAttribute="leading" secondItem="wtb-Oz-WVx" secondAttribute="leading" constant="13" id="KYk-f4-caU"/>
-                                <constraint firstItem="dw1-jr-EIY" firstAttribute="top" secondItem="wtb-Oz-WVx" secondAttribute="top" id="PVB-Gy-yFt"/>
-                                <constraint firstAttribute="bottom" secondItem="dw1-jr-EIY" secondAttribute="bottom" id="zZR-dm-rhc"/>
-                            </constraints>
-                        </view>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zmD-mp-RXa">
-                            <rect key="frame" x="0.0" y="55.5" width="337" height="217.5"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <color key="separatorColor" name="DynamicTextFieldPlaceholderColor"/>
-                        </tableView>
-                    </subviews>
-                </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-kX-z1i" userLabel="Trash Button">
-                    <rect key="frame" x="374" y="89" width="20" height="22"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="7CJ-u5-4iX"/>
-                        <constraint firstAttribute="height" constant="22" id="Z77-Yh-F0L"/>
-                    </constraints>
-                    <color key="tintColor" name="red"/>
-                    <state key="normal" image="trash" catalog="system"/>
-                    <connections>
-                        <action selector="trashButtonPressed:" destination="-1" eventType="touchUpInside" id="wrn-7M-A1E"/>
-                    </connections>
-                </button>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="systemGrayColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="DynamicCardBackgroundColor"/>
             <constraints>
-                <constraint firstItem="sWT-kX-z1i" firstAttribute="leading" secondItem="A6D-WQ-yGT" secondAttribute="trailing" constant="17" id="3B1-bZ-5lh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dw1-jr-EIY" secondAttribute="trailing" constant="70" id="2Jk-oO-fww"/>
                 <constraint firstItem="mjI-zk-af2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4hv-2d-gkf"/>
-                <constraint firstItem="A6D-WQ-yGT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="91W-Va-4Zm"/>
-                <constraint firstItem="0cn-AW-hOf" firstAttribute="top" secondItem="mjI-zk-af2" secondAttribute="bottom" id="IwA-de-Waq"/>
                 <constraint firstAttribute="trailing" secondItem="mjI-zk-af2" secondAttribute="trailing" id="P5l-vl-BFy"/>
-                <constraint firstItem="sWT-kX-z1i" firstAttribute="top" secondItem="mjI-zk-af2" secondAttribute="bottom" constant="42" id="Rfv-kz-frL"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A6D-WQ-yGT" secondAttribute="trailing" constant="57" id="UEB-kY-kwT"/>
-                <constraint firstItem="0cn-AW-hOf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="UjJ-cz-KQ2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="98g-OW-726" secondAttribute="trailing" constant="70" id="bxz-zW-cJE"/>
+                <constraint firstItem="Hpu-cr-Hve" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VhA-Jf-Qma"/>
+                <constraint firstItem="Hpu-cr-Hve" firstAttribute="top" secondItem="dw1-jr-EIY" secondAttribute="bottom" constant="12" id="eGw-jX-h2G"/>
+                <constraint firstItem="Hpu-cr-Hve" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="fF5-sc-oi1"/>
                 <constraint firstItem="mjI-zk-af2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="okj-0J-Glo"/>
-                <constraint firstItem="98g-OW-726" firstAttribute="top" secondItem="mjI-zk-af2" secondAttribute="bottom" id="pd4-BG-4t0"/>
-                <constraint firstItem="A6D-WQ-yGT" firstAttribute="top" secondItem="0cn-AW-hOf" secondAttribute="bottom" constant="12" id="tGy-IC-3nW"/>
-                <constraint firstAttribute="bottom" secondItem="A6D-WQ-yGT" secondAttribute="bottom" id="vOl-KW-EHD"/>
+                <constraint firstItem="dw1-jr-EIY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="37" id="okr-Ot-Dmw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hpu-cr-Hve" secondAttribute="trailing" constant="57" id="sbC-UW-cWY"/>
+                <constraint firstItem="dw1-jr-EIY" firstAttribute="top" secondItem="mjI-zk-af2" secondAttribute="bottom" constant="1" id="wPY-Kc-1E9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-104.34782608695653" y="63.616071428571423"/>
         </view>
     </objects>
     <resources>
+        <image name="CardUpArrowImage" width="176" height="56.5"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="DynamicCardBackgroundColor">
-            <color red="0.92941176470588238" green="1" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92900002002716064" green="1" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DynamicTextFieldBorderColor">
             <color red="0.71799999475479126" green="0.69800001382827759" blue="0.67500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="DynamicTextFieldPlaceholderColor">
-            <color red="0.6940000057220459" green="0.67500001192092896" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DynamicTextFieldTextColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
