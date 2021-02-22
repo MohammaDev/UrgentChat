@@ -113,10 +113,20 @@ extension HomeViewController {
         cardViewController.view.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
         cardViewController.handleArea.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
         
-        cardViewController.historyButton.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
-        cardViewController.historyButton.setTitleColor(UIColor(named: "\(kind)\(K.TextField.textColor)"), for: .normal)
+        if (cardViewController.historyButton.isPressed){
+            cardViewController.historyButton.backgroundColor = UIColor(named: "\(kind)CardButtonBackgroundColor")
+            cardViewController.templatesButton.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+        }
+        else if (cardViewController.templatesButton.isPressed){
+            cardViewController.historyButton.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+            cardViewController.templatesButton.backgroundColor = UIColor(named: "\(kind)CardButtonBackgroundColor")
+        }
+        else {
+            cardViewController.historyButton.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+            cardViewController.templatesButton.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+        }
         
-        cardViewController.templatesButton.backgroundColor = UIColor(named: "\(kind)\(K.Card.backgroundColor)")
+        cardViewController.historyButton.setTitleColor(UIColor(named: "\(kind)\(K.TextField.textColor)"), for: .normal)
         cardViewController.templatesButton.setTitleColor(UIColor(named: "\(kind)\(K.TextField.textColor)"), for: .normal)
         
         cardViewController.titleLable.textColor = UIColor(named: "\(kind)\(K.TextField.textColor)")

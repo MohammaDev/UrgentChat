@@ -115,6 +115,10 @@ class HomeViewController: UIViewController {
 }
 //MARK: - CardDelegate
 extension HomeViewController: CardViewControllerDelegate {
+    func didSelectButton() {
+        changeTheme(to: (userDefaults.object(forKey: K.Theme.currentTheme) as? String))
+    }
+    
     func didSelectRecord(phoneNumber : String) {
         textField.set(phoneNumber: phoneNumber)
     }
@@ -164,7 +168,9 @@ extension HomeViewController {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardPan(recognizer:)))
         cardViewController.handleArea.addGestureRecognizer(getTapGesture())
         cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
-        self.cardViewController.historyButton.addGestureRecognizer(getTapGesture())
+        cardViewController.templatesButton.addGestureRecognizer(getTapGesture())
+        cardViewController.historyButton.addGestureRecognizer(getTapGesture())
+        self.cardViewController.historyButton.isPressed = true
     }
     
     func getTapGesture() -> UITapGestureRecognizer {
@@ -206,10 +212,16 @@ extension HomeViewController {
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
                     self.cardViewController.arrowImage.image = UIImage(named: "CardDownArrowImage")
                     self.cardViewController.historyButton.gestureRecognizers?.removeAll()
+                    self.cardViewController.templatesButton.gestureRecognizers?.removeAll()
                 case .collapsed:
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - 95 - self.cardHandleAreaHeight
                     self.cardViewController.arrowImage.image = UIImage(named: "CardUpArrowImage")
                     self.cardViewController.historyButton.addGestureRecognizer(self.getTapGesture())
+                    self.cardViewController.templatesButton.addGestureRecognizer(self.getTapGesture())
+                    self.cardViewController.historyButton.isPressed = true
+                    self.cardViewController.templatesButton.isPressed = false
+                    self.cardViewController.tableView.reloadData()
+                    self.changeTheme(to: self.userDefaults.object(forKey: K.Theme.currentTheme) as? String)
                 }
             }
             frameAnimator.addCompletion { _ in

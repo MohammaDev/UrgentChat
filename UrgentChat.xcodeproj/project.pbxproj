@@ -26,6 +26,8 @@
 		D14FA00824BB8D05001A0276 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FA00724BB8D05001A0276 /* UIButton.swift */; };
 		D14FA00E24BB9776001A0276 /* FPNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FA00D24BB9776001A0276 /* FPNTextField.swift */; };
 		D14FA01024BB9C55001A0276 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FA00F24BB9C55001A0276 /* Settings.swift */; };
+		D150242925E3847700EE06B6 /* TemplateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D150242725E3847700EE06B6 /* TemplateCell.swift */; };
+		D150242A25E3847700EE06B6 /* TemplateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D150242825E3847700EE06B6 /* TemplateCell.xib */; };
 		D152C85824C6503300E00A94 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1884D1F24C610EE000471D5 /* NotificationCenter.framework */; };
 		D152C85B24C6503300E00A94 /* WidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D152C85A24C6503300E00A94 /* WidgetViewController.swift */; };
 		D152C85E24C6503300E00A94 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D152C85C24C6503300E00A94 /* MainInterface.storyboard */; };
@@ -98,6 +100,8 @@
 		D14FA00724BB8D05001A0276 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D14FA00D24BB9776001A0276 /* FPNTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPNTextField.swift; sourceTree = "<group>"; };
 		D14FA00F24BB9C55001A0276 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D150242725E3847700EE06B6 /* TemplateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCell.swift; sourceTree = "<group>"; };
+		D150242825E3847700EE06B6 /* TemplateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateCell.xib; sourceTree = "<group>"; };
 		D152C85724C6503300E00A94 /* Urgent Chat.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Urgent Chat.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D152C85A24C6503300E00A94 /* WidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewController.swift; sourceTree = "<group>"; };
 		D152C85D24C6503300E00A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				D11C8DAD24C0ADA500667FFA /* InfoPlist.strings */,
 				D1C3657325E123480073BF09 /* HistoryCell.swift */,
 				D1C3657425E123480073BF09 /* HistoryCell.xib */,
+				D150242725E3847700EE06B6 /* TemplateCell.swift */,
+				D150242825E3847700EE06B6 /* TemplateCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				D11C8DAF24C0ADA500667FFA /* InfoPlist.strings in Resources */,
 				D1C3656A25E1222F0073BF09 /* CardViewController.xib in Resources */,
 				D10BFE9724AFD924009E8F6B /* LaunchScreen.storyboard in Resources */,
+				D150242A25E3847700EE06B6 /* TemplateCell.xib in Resources */,
 				D10BFE9424AFD924009E8F6B /* Assets.xcassets in Resources */,
 				D10BFE9224AFD923009E8F6B /* Main.storyboard in Resources */,
 			);
@@ -494,6 +501,7 @@
 				D1C3657525E123480073BF09 /* HistoryCell.swift in Sources */,
 				D14115BC25E1871600375FD5 /* AppManager.swift in Sources */,
 				D14FA00324BB52AB001A0276 /* Home.swift in Sources */,
+				D150242925E3847700EE06B6 /* TemplateCell.swift in Sources */,
 				D1BB466225DFFB22008F8CEB /* RoundedButton.swift in Sources */,
 				D14FA01024BB9C55001A0276 /* Settings.swift in Sources */,
 				D14FA00824BB8D05001A0276 /* UIButton.swift in Sources */,

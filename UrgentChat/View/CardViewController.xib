@@ -40,6 +40,9 @@
                             <state key="normal" title="History">
                                 <color key="titleColor" name="DynamicTextFieldTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="historyButtonPressed:" destination="-1" eventType="touchUpInside" id="Zci-Wt-xPQ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98g-OW-726" customClass="RoundedButton" customModule="UrgentChat" customModuleProvider="target">
                             <rect key="frame" x="261" y="40" width="83" height="34"/>
@@ -51,6 +54,9 @@
                             <state key="normal" title="Templates">
                                 <color key="titleColor" name="DynamicTextFieldTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="templatesButtonPressed:" destination="-1" eventType="touchUpInside" id="fzh-Y5-BFl"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHr-6L-qDi" userLabel="Title Label">
                             <rect key="frame" x="37" y="90" width="307" height="21"/>
