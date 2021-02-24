@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
         case expanded
         case collapsed
     }
-    
     var cardViewController:CardViewController!
     lazy var cardHeight:CGFloat = {return (self.view.frame.size.height-120)/2}()
     let cardHandleAreaHeight:CGFloat = 65
@@ -38,7 +37,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupCard()
+        self.setupCard()
         self.setBouncing()
         self.setObservers()
         self.setDubaiFont()
@@ -121,6 +120,10 @@ extension HomeViewController: CardViewControllerDelegate {
     
     func didSelectRecord(phoneNumber : String) {
         textField.set(phoneNumber: phoneNumber)
+    }
+    
+    func didSelectTemplate() {
+        //
     }
 }
 

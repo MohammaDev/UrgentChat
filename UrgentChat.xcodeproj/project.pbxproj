@@ -41,11 +41,11 @@
 		D17A7AE224C6602B00F41E5E /* FPNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7AE124C6602B00F41E5E /* FPNTextField.swift */; };
 		D17A7AE424C660E400F41E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17A7AE324C660E400F41E5E /* Assets.xcassets */; };
 		D17A7AE624C6664A00F41E5E /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7AE524C6664A00F41E5E /* K.swift */; };
-		D1BB466225DFFB22008F8CEB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB466125DFFB22008F8CEB /* RoundedButton.swift */; };
 		D1C3656925E1222F0073BF09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3656525E1222F0073BF09 /* CardViewController.swift */; };
 		D1C3656A25E1222F0073BF09 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C3656625E1222F0073BF09 /* CardViewController.xib */; };
 		D1C3657525E123480073BF09 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3657325E123480073BF09 /* HistoryCell.swift */; };
 		D1C3657625E123480073BF09 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C3657425E123480073BF09 /* HistoryCell.xib */; };
+		D1CC39F125E67A4C0075136B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CC39F025E67A4C0075136B /* RoundedButton.swift */; };
 		D1D5432E24BFF310000C786A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1D5432C24BFF310000C786A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -118,11 +118,11 @@
 		D17A7AE324C660E400F41E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D17A7AE524C6664A00F41E5E /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		D1884D1F24C610EE000471D5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		D1BB466125DFFB22008F8CEB /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = ../../../../../../RoundedButton.swift; sourceTree = "<group>"; };
 		D1C3656525E1222F0073BF09 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		D1C3656625E1222F0073BF09 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		D1C3657325E123480073BF09 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		D1C3657425E123480073BF09 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		D1CC39F025E67A4C0075136B /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D1D5432A24BFF089000C786A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		D1D5432B24BFF089000C786A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D1D5432D24BFF310000C786A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 				D14115B725E1871600375FD5 /* Model */,
 				D107587B24B3566800736921 /* View */,
 				D107587C24B3569700736921 /* Controller */,
-				D1BB466025DFFAEF008F8CEB /* Components */,
+				D1CC39EF25E67A4C0075136B /* Components */,
 				D10BFE9324AFD924009E8F6B /* Assets.xcassets */,
 				D10BFE9824AFD924009E8F6B /* Info.plist */,
 				D125F1C724B7AF4F00D0DAF6 /* K.swift */,
@@ -302,10 +302,10 @@
 			path = Functions;
 			sourceTree = "<group>";
 		};
-		D1BB466025DFFAEF008F8CEB /* Components */ = {
+		D1CC39EF25E67A4C0075136B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D1BB466125DFFB22008F8CEB /* RoundedButton.swift */,
+				D1CC39F025E67A4C0075136B /* RoundedButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -501,8 +501,8 @@
 				D1C3657525E123480073BF09 /* HistoryCell.swift in Sources */,
 				D14115BC25E1871600375FD5 /* AppManager.swift in Sources */,
 				D14FA00324BB52AB001A0276 /* Home.swift in Sources */,
+				D1CC39F125E67A4C0075136B /* RoundedButton.swift in Sources */,
 				D150242925E3847700EE06B6 /* TemplateCell.swift in Sources */,
-				D1BB466225DFFB22008F8CEB /* RoundedButton.swift in Sources */,
 				D14FA01024BB9C55001A0276 /* Settings.swift in Sources */,
 				D14FA00824BB8D05001A0276 /* UIButton.swift in Sources */,
 				D14115BB25E1871600375FD5 /* HistoryRecord.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 protocol CardViewControllerDelegate {
     func didSelectRecord(phoneNumber: String)
+    func didSelectTemplate()
     func didSelectButton()
 }
 
@@ -115,7 +116,13 @@ extension CardViewController : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        delegate?.didSelectRecord(phoneNumber: arrayOfRecords[indexPath.row].recordNumber)
+        
+        if historyButton.isPressed {
+            delegate?.didSelectRecord(phoneNumber: arrayOfRecords[indexPath.row].recordNumber)
+        }
+        else {
+            delegate?.didSelectTemplate()
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
