@@ -21,6 +21,7 @@ extension HomeViewController {
     
     @objc func bounce() {
         if clipboardHasStringAndTextFieldIsEmpty() {
+            changeButtonStatus()
             let bounds = chatButton.bounds
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
                 self.chatButton.bounds = CGRect(x: bounds.origin.x - 10, y: bounds.origin.y, width: bounds.size.width, height: bounds.size.height)
