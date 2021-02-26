@@ -38,6 +38,7 @@
 		D16E9ED424C67096009B9536 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16E9ED324C67096009B9536 /* Widget.swift */; };
 		D172C0E124B90B2B001FFFC1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172C0E024B90B2B001FFFC1 /* WebViewController.swift */; };
 		D172C0E324B90FB5001FFFC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D172C0E224B90FB5001FFFC1 /* WebKit.framework */; };
+		D1789F6325E9719E00BA8A27 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1789F6225E9719E00BA8A27 /* Card.swift */; };
 		D17A7AE224C6602B00F41E5E /* FPNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7AE124C6602B00F41E5E /* FPNTextField.swift */; };
 		D17A7AE424C660E400F41E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17A7AE324C660E400F41E5E /* Assets.xcassets */; };
 		D17A7AE624C6664A00F41E5E /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A7AE524C6664A00F41E5E /* K.swift */; };
@@ -114,6 +115,7 @@
 		D16E9ED324C67096009B9536 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		D172C0E024B90B2B001FFFC1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D172C0E224B90FB5001FFFC1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D1789F6225E9719E00BA8A27 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D17A7AE124C6602B00F41E5E /* FPNTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPNTextField.swift; sourceTree = "<group>"; };
 		D17A7AE324C660E400F41E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D17A7AE524C6664A00F41E5E /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				D14FA00224BB52AB001A0276 /* Home.swift */,
+				D1789F6225E9719E00BA8A27 /* Card.swift */,
 				D14FA00F24BB9C55001A0276 /* Settings.swift */,
 				D14FA00724BB8D05001A0276 /* UIButton.swift */,
 				D14FA00D24BB9776001A0276 /* FPNTextField.swift */,
@@ -490,6 +493,7 @@
 			files = (
 				D10BFE8F24AFD923009E8F6B /* HomeViewController.swift in Sources */,
 				D14115BD25E1871600375FD5 /* Image.swift in Sources */,
+				D1789F6325E9719E00BA8A27 /* Card.swift in Sources */,
 				D172C0E124B90B2B001FFFC1 /* WebViewController.swift in Sources */,
 				D125F1C824B7AF4F00D0DAF6 /* K.swift in Sources */,
 				D10BFE8B24AFD923009E8F6B /* AppDelegate.swift in Sources */,

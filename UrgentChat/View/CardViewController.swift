@@ -35,18 +35,13 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        if let encodedData = userDefaults.value(forKey:"Records") as? Data {
-            arrayOfRecords = try! PropertyListDecoder().decode([HistoryRecord].self, from: encodedData)
-        }
+        self.retrieveArrays()
+        self.setHistoryButton()
         
-        arrayOfTemplates = userDefaults.object(forKey: "Template") as? [String] ?? arrayOfTemplates
-        
-        historyButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 26, bottom: 0, right: 26)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UINib(nibName: "HistoryCell", bundle: nil), forCellReuseIdentifier: "HistoryCell")
-        tableView.register(UINib(nibName: "TemplateCell", bundle: nil), forCellReuseIdentifier: "TemplateCell")
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.register(UINib(nibName: "HistoryCell", bundle: nil), forCellReuseIdentifier: "HistoryCell")
+        self.tableView.register(UINib(nibName: "TemplateCell", bundle: nil), forCellReuseIdentifier: "TemplateCell")
     }
     
     @IBAction func historyButtonPressed(_ sender: UIButton) {
@@ -75,6 +70,7 @@ class CardViewController: UIViewController {
     }
 }
 
+//MARK: - UITableViewDataSource
 extension CardViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if historyButton.isPressed{
@@ -103,15 +99,17 @@ extension CardViewController : UITableViewDataSource {
             cell.dateLable.textColor = UIColor(named: "\(kind!)\(K.TextField.textColor)")
             return cell
         }
-        else {
+        if templatesButton.isPressed {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TemplateCell", for: indexPath) as! TemplateCell
             cell.templateLable.text = arrayOfTemplates[indexPath.row]
             cell.baseView.backgroundColor = UIColor(named: "\(kind!)\(K.Card.backgroundColor)")
             return cell
         }
+        return UITableViewCell()
     }
 }
 
+//MARK: - UITableViewDelegate
 extension CardViewController : UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -120,7 +118,7 @@ extension CardViewController : UITableViewDelegate {
         if historyButton.isPressed {
             delegate?.didSelectRecord(phoneNumber: arrayOfRecords[indexPath.row].recordNumber)
         }
-        else {
+        if templatesButton.isPressed {
             delegate?.didSelectTemplate()
         }
     }
@@ -133,7 +131,7 @@ extension CardViewController : UITableViewDelegate {
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
-        else {
+        if templatesButton.isPressed {
             if editingStyle == .delete {
                 arrayOfTemplates.remove(at: indexPath.row)
                 userDefaults.set(arrayOfTemplates, forKey: "Template")
@@ -141,5 +139,29 @@ extension CardViewController : UITableViewDelegate {
             }
         }
     }
+        
+    func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        if (action == #selector(UIResponderStandardEditActions.copy(_:))) {
+            return true
+        }
+        return false
+    }
     
+    func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
+        
+        if (action == #selector(UIResponderStandardEditActions.copy(_:))) {
+            if historyButton.isPressed {
+                let cell = tableView.cellForRow(at: indexPath) as! HistoryCell
+                UIPasteboard.general.string = cell.numberLable.text
+            }
+            if templatesButton.isPressed {
+                let cell = tableView.cellForRow(at: indexPath) as! TemplateCell
+                UIPasteboard.general.string = cell.templateLable.text
+            }
+        }
+    }
 }

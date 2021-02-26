@@ -58,11 +58,11 @@ extension WidgetViewController {
     }
     
     func clipboardHasStringAndTextFieldIsEmpty() -> Bool {
-        return (UIPasteboard.general.string != nil) && ((textField.text?.isEmpty) == true)
+        return (UIPasteboard.general.hasStrings) && ((textField.text?.isEmpty) == true)
     }
     
     func clipboardAndTextFieldAreEmpty() -> Bool {
-        return (UIPasteboard.general.string == nil) && ((textField.text?.isEmpty) == true)
+        return (!UIPasteboard.general.hasStrings) && ((textField.text?.isEmpty) == true)
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {

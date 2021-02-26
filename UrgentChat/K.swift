@@ -57,7 +57,16 @@ struct K {
     }
     
     struct Card {
-        static let backgroundColor = "CardBackgroundColor"
+        static let identifier           = "CardViewController"
+        static let backgroundColor      = "CardBackgroundColor"
+        struct Button {
+            static let tint             = "CardButtonTintColor"
+            static let backgroundColor  = "CardButtonBackgroundColor"
+        }
+        struct Arrow {
+            static let up               = "CardUpArrowImage"
+            static let down             = "CardDownArrowImage"
+        }
     }
     
     struct Image {

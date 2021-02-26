@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         self.setupCard()
         self.setBouncing()
         self.setObservers()
+        self.setTapRecognizer()
         self.setDubaiFont()
         self.changeButtonStatus()
         self.setActionForRightBarButton()
@@ -53,16 +54,8 @@ class HomeViewController: UIViewController {
         chatButton.setCornerRadius()
         
         cardViewController.delegate = self
-        SettingsViewController.delegate = self
 
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false 
-        view.addGestureRecognizer(tap)
-    }
-    
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
+        SettingsViewController.delegate = self
     }
     
     @IBAction func chatButtonPressed(_ sender: UIButton) {
@@ -158,113 +151,3 @@ extension HomeViewController : FPNTextFieldDelegate {
     func fpnDidSelectCountry(name: String, dialCode: String, code: String) {}
 }
 
-//MARK: - SettingsViewControllerDelegate
-extension HomeViewController {
-    func setupCard() {
-        cardViewController = CardViewController(nibName:"CardViewController", bundle:nil)
-        self.addChild(cardViewController)
-        self.view.addSubview(cardViewController.view)
-        cardViewController.view.clipsToBounds = true
-        cardViewController.view.layer.cornerRadius = 50
-        cardViewController.arrowImage.image = UIImage(named: "CardUpArrowImage")
-        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - 95 - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardPan(recognizer:)))
-        cardViewController.handleArea.addGestureRecognizer(getTapGesture())
-        cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
-        cardViewController.templatesButton.addGestureRecognizer(getTapGesture())
-        cardViewController.historyButton.addGestureRecognizer(getTapGesture())
-        self.cardViewController.historyButton.isPressed = true
-    }
-    
-    func getTapGesture() -> UITapGestureRecognizer {
-        return UITapGestureRecognizer(target: self, action: #selector(HomeViewController.handleCardTap(recognzier:)))
-    }
-    
-    @objc
-    func handleCardTap(recognzier:UITapGestureRecognizer) {
-        switch recognzier.state {
-        case .ended:
-            animateTransitionIfNeeded(state: nextState, duration: 0.5)
-        default:
-            break
-        }
-    }
-    
-    @objc
-    func handleCardPan (recognizer:UIPanGestureRecognizer) {
-        switch recognizer.state {
-        case .began:
-            startInteractiveTransition(state: nextState, duration: 0.5)
-        case .changed:
-            let translation = recognizer.translation(in: self.cardViewController.handleArea)
-            var fractionComplete = translation.y / cardHeight
-            fractionComplete = cardVisible ? fractionComplete : -fractionComplete
-            updateInteractiveTransition(fractionCompleted: fractionComplete)
-        case .ended:
-            continueInteractiveTransition()
-        default:
-            break
-        }
-    }
-    
-    func animateTransitionIfNeeded (state:CardState, duration:TimeInterval) {
-        if runningAnimations.isEmpty {
-            let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
-                switch state {
-                case .expanded:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
-                    self.cardViewController.arrowImage.image = UIImage(named: "CardDownArrowImage")
-                    self.cardViewController.historyButton.gestureRecognizers?.removeAll()
-                    self.cardViewController.templatesButton.gestureRecognizers?.removeAll()
-                case .collapsed:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height - 95 - self.cardHandleAreaHeight
-                    self.cardViewController.arrowImage.image = UIImage(named: "CardUpArrowImage")
-                    self.cardViewController.historyButton.addGestureRecognizer(self.getTapGesture())
-                    self.cardViewController.templatesButton.addGestureRecognizer(self.getTapGesture())
-                    self.cardViewController.historyButton.isPressed = true
-                    self.cardViewController.templatesButton.isPressed = false
-                    self.cardViewController.tableView.reloadData()
-                    self.changeTheme(to: self.userDefaults.object(forKey: K.Theme.currentTheme) as? String)
-                }
-            }
-            frameAnimator.addCompletion { _ in
-                self.cardVisible = !self.cardVisible
-                self.runningAnimations.removeAll()
-            }
-            frameAnimator.startAnimation()
-            runningAnimations.append(frameAnimator)
-            let cornerRadiusAnimator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
-                switch state {
-                case .expanded:
-                    self.cardViewController.view.layer.cornerRadius = 50
-                case .collapsed:
-                    self.cardViewController.view.layer.cornerRadius = 50
-                }
-            }
-            cornerRadiusAnimator.startAnimation()
-            runningAnimations.append(cornerRadiusAnimator)
-        }
-    }
-    
-    func startInteractiveTransition(state:CardState, duration:TimeInterval) {
-        if runningAnimations.isEmpty {
-            animateTransitionIfNeeded(state: state, duration: duration)
-        }
-        for animator in runningAnimations {
-            animator.pauseAnimation()
-            animationProgressWhenInterrupted = animator.fractionComplete
-        }
-    }
-    
-    func updateInteractiveTransition(fractionCompleted:CGFloat) {
-        for animator in runningAnimations {
-            animator.fractionComplete = fractionCompleted + animationProgressWhenInterrupted
-        }
-    }
-    
-    func continueInteractiveTransition (){
-        for animator in runningAnimations {
-            animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
-        }
-    }
-}
